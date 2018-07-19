@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_margin="10dp"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Tv on Rent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_product"
+            android:background="@mipmap/ic_launcher"
+            android:layout_width="100dp"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/img_product"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_publish_date"
+                android:text="Publish date : 14th June"
+                android:padding="8dp"
+                android:textColor="@color/grey_900"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_price"
+                android:textColor="@color/colorAccent"
+                android:padding="8dp"
+                android:text="Price : 7000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txt_more"
+                android:padding="4dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:textColor="@color/red_500"
+                android:text="More"
+                android:gravity="center"
+                android:drawableRight="@drawable/ic_down"
+                android:textSize="16sp"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:background="@color/blue_grey_50"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_duration="400"
+        app:el_expanded="false"
+        app:el_parallax="0.5">
+
+        <LinearLayout
+            android:background="@color/blue_grey_50"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6sp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textColor="@color/grey_900"
+                android:text="We do provide all kind of appliances like fridge,washing mashing,AC,Air cooler, TV, mini fridge and home furniture on monthly rental We do provide Free delivery Free Pick up" />
+
+            <TextView
+                android:id="@+id/txt_duration"
+                android:textColor="@color/grey_900"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6sp"
+                android:text="Minimum duration of Rent: 3 months" />
+
+            <TextView
+                android:id="@+id/txt_sec_deposite"
+                android:textColor="@color/grey_900"
+                android:padding="6sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Security Deposit: 1950.00" />
+
+        </LinearLayout>
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>
